@@ -213,9 +213,40 @@ export default function App() {
         header: true,
         complete: (results) => {
           const params: any = {};
+          const normalizeCell = (value: any) => (value ?? "").toString().trim();
+          const normalizeKey = (value: any) =>
+            normalizeCell(value)
+              .toLowerCase()
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "")
+              .replace(/[^a-z0-9]+/g, "_")
+              .replace(/^_+|_+$/g, "");
+
           results.data.forEach((row: any) => {
-            const key = (row.Clave || row.clave || "").toString().trim().toLowerCase();
+            const normalizedRow: any = {};
+            Object.keys(row || {}).forEach((rawKey) => {
+              normalizedRow[normalizeKey(rawKey)] = row[rawKey];
+            });
+
+            const explicitKey = normalizeCell(normalizedRow.clave || normalizedRow.key || normalizedRow.parametro);
+            const group = normalizeKey(normalizedRow.grupo || normalizedRow.group || normalizedRow.bloque);
+            const category = normalizeKey(normalizedRow.categoria || normalizedRow.category);
+            const line = normalizeKey(normalizedRow.linea || normalizedRow.line || normalizedRow.producto);
+            const months = normalizeKey(normalizedRow.plazo || normalizedRow.meses || normalizedRow.months);
+            const campaign = normalizeKey(normalizedRow.campana || normalizedRow.campaign);
+            const variable = normalizeKey(normalizedRow.variable || normalizedRow.campo || normalizedRow.parametro);
+
+            const compositeKey = [group, category, line, months, campaign, variable]
+              .filter(Boolean)
+              .join("_");
+
+            const key = normalizeKey(explicitKey || compositeKey);
             let value = row.Valor || row.valor;
+
+            if (value === undefined) {
+              value = normalizedRow.valor ?? normalizedRow.value;
+            }
+
             // Normalize numbers (handling potential 1.234,56 or 1,234.56 formats)
             if (value && typeof value === 'string') {
               if (value.includes(",") && value.includes(".")) {
@@ -253,29 +284,62 @@ export default function App() {
         header: true,
         skipEmptyLines: true,
         complete: (results) => {
+          const normalizeHeader = (value: string) =>
+            value
+              .trim()
+              .toLowerCase()
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "")
+              .replace(/[^a-z0-9]+/g, "_")
+              .replace(/^_+|_+$/g, "");
+
+          const getField = (row: any, aliases: string[]) => {
+            for (const alias of aliases) {
+              const value = row[alias];
+              if (value !== undefined && value !== null && String(value).trim() !== "") {
+                return value;
+              }
+            }
+            return "";
+          };
+
+          const parseBoolean = (value: any) => {
+            const text = String(value ?? "").trim().toLowerCase();
+            return ["si", "sí", "yes", "true", "1", "x"].includes(text);
+          };
+
           const validModels = results.data
             .map((row: any) => {
-              // Normalize keys to handle case sensitivity (ID vs id)
               const normalizedRow: any = {};
               Object.keys(row).forEach(key => {
-                normalizedRow[key.trim().toLowerCase()] = row[key];
+                normalizedRow[normalizeHeader(key)] = row[key];
               });
               return normalizedRow;
             })
-            .filter((row: any) => (row.id || row.ID) && (row.precio || row.Precio))
+            .filter((row: any) => getField(row, ["id", "codigo", "cod_modelo"]) && getField(row, ["precio", "precio_lista", "precio_final"]))
             .map((row: any) => ({
-              id: (row.id || row.ID).toString().trim(),
-              brand: row.marca || "VW",
-              name: row.modelo || "Sin Nombre",
-              price: parseInt((row.precio || row.Precio).toString().replace(/\D/g, "")) || 0,
-              category: (row.categoria || "autos").toLowerCase().trim()
+              id: getField(row, ["id", "codigo", "cod_modelo"]).toString().trim(),
+              brand: getField(row, ["marca", "brand"]) || "VW",
+              name: getField(row, ["modelo", "nombre_modelo", "version"]) || "Sin Nombre",
+              price: parseInt(getField(row, ["precio", "precio_lista", "precio_final"]).toString().replace(/\D/g, "")) || 0,
+              category: getField(row, ["categoria", "tipo", "segmento"]).toString().toLowerCase().trim() || "autos",
+              eligible: parseBoolean(getField(row, ["elegible", "eligible", "elegible_uva", "uva"]))
             }));
+
+          const eligibleIds = validModels.filter((row: any) => row.eligible).map((row: any) => row.id);
+          const modelsForState = validModels.map(({ eligible, ...rest }: any) => rest);
           
-          if (validModels.length > 0) {
-            setSheetModels(validModels);
+          if (modelsForState.length > 0) {
+            setSheetModels(modelsForState);
+            if (eligibleIds.length > 0) {
+              setConfigParams((prev: any) => ({
+                ...(prev || {}),
+                modelos_elegibles: eligibleIds.join(","),
+              }));
+            }
             localStorage.setItem("vw_sheet_url", url);
           } else if (results.data.length > 0) {
-             console.warn("Se leyeron filas pero no coincidieron con el formato ID/Precio. Verifica los encabezados.");
+             console.warn("Se leyeron filas pero no coincidieron con el formato esperado. Verifica columnas como ID/Codigo y Precio.");
           }
           setIsSyncing(false);
         },

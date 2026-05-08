@@ -1,0 +1,145 @@
+Grupo,Categoria,Linea,Plazo,Campana,Variable,Valor,Descripcion
+general,,,,,current_month,Mayo 2026,Mes visible en la interfaz
+general,,,,,circular_nro,28-26,Numero de circular vigente
+general,,,,,uva_referencia,1333.96,Valor de referencia UVA
+general,,,,,gastos_admin,6.0,Porcentaje base de gastos administrativos
+general,,,,,prenda,2.4,Porcentaje base de prenda
+general,,,,,iva_quebranto,21,IVA aplicado al quebranto
+general,,,,,modelos_elegibles,"TER-2603,TER-2604,TCR-2602,TCR-2603,TCR-2604,POL-2603,POL-2605,TAO-2602,TAO-2603,NIV-2603,NIV-2604",Opcional si no queres manejar elegibles desde el sheet de modelos
+plan,amarok,tasafija,12,am,tna,0,TNA
+plan,amarok,tasafija,12,am,qf,11.5,Gastos banco
+plan,amarok,tasafija,12,am,max,40000000,Monto maximo
+plan,amarok,tasafija,12,am,cuota_ini,83.33,Cuota inicial cada 1000
+plan,amarok,tasafija,12,am,cuota_prom,83.33,Cuota promedio cada 1000
+plan,amarok,tasafija,12,sinq,tna,0,TNA
+plan,amarok,tasafija,12,sinq,qf,0,Gastos banco
+plan,amarok,tasafija,12,sinq,max,20000000,Monto maximo
+plan,amarok,tasafija,12,sinq,cuota_ini,83.33,Cuota inicial cada 1000
+plan,amarok,tasafija,12,sinq,cuota_prom,83.33,Cuota promedio cada 1000
+plan,amarok,tasafija,18,am,tna,0,TNA
+plan,amarok,tasafija,18,am,qf,12,Gastos banco
+plan,amarok,tasafija,18,am,max,26000000,Monto maximo
+plan,amarok,tasafija,18,am,cuota_ini,55.56,Cuota inicial cada 1000
+plan,amarok,tasafija,18,am,cuota_prom,55.56,Cuota promedio cada 1000
+plan,amarok,tasafija,24,am,tna,0,TNA
+plan,amarok,tasafija,24,am,qf,11,Gastos banco
+plan,amarok,tasafija,24,am,max,18000000,Monto maximo
+plan,amarok,tasafija,24,am,cuota_ini,41.67,Cuota inicial cada 1000
+plan,amarok,tasafija,24,am,cuota_prom,41.67,Cuota promedio cada 1000
+plan,amarok,uva,24,uvae,tna,0,TNA
+plan,amarok,uva,24,uvae,qf,0,Gastos banco
+plan,amarok,uva,24,uvae,max,20000000,Monto maximo
+plan,amarok,uva,24,uvae,cuota_ini,41.67,Cuota inicial cada 1000
+plan,amarok,uva,24,uvae,cuota_prom,41.67,Cuota promedio cada 1000
+plan,autos,tasafija,12,esp,tna,0,TNA
+plan,autos,tasafija,12,esp,qf,10.5,Gastos banco
+plan,autos,tasafija,12,esp,max,25000000,Monto maximo
+plan,autos,tasafija,12,esp,cuota_ini,83.33,Cuota inicial cada 1000
+plan,autos,tasafija,12,esp,cuota_prom,83.33,Cuota promedio cada 1000
+plan,autos,tasafija,12,fin,tna,0,TNA
+plan,autos,tasafija,12,fin,qf,7.5,Gastos banco
+plan,autos,tasafija,12,fin,max,28000000,Monto maximo
+plan,autos,tasafija,12,fin,cuota_ini,83.33,Cuota inicial cada 1000
+plan,autos,tasafija,12,fin,cuota_prom,83.33,Cuota promedio cada 1000
+plan,autos,tasafija,12,sinq,tna,0,TNA
+plan,autos,tasafija,12,sinq,qf,0,Gastos banco
+plan,autos,tasafija,12,sinq,max,17000000,Monto maximo
+plan,autos,tasafija,12,sinq,cuota_ini,83.33,Cuota inicial cada 1000
+plan,autos,tasafija,12,sinq,cuota_prom,83.33,Cuota promedio cada 1000
+plan,autos,tasafija,18,esp,tna,0,TNA
+plan,autos,tasafija,18,esp,qf,12,Gastos banco
+plan,autos,tasafija,18,esp,max,17000000,Monto maximo
+plan,autos,tasafija,18,esp,cuota_ini,55.56,Cuota inicial cada 1000
+plan,autos,tasafija,18,esp,cuota_prom,55.56,Cuota promedio cada 1000
+plan,autos,tasafija,18,fin,tna,0,TNA
+plan,autos,tasafija,18,fin,qf,11,Gastos banco
+plan,autos,tasafija,18,fin,max,22000000,Monto maximo
+plan,autos,tasafija,18,fin,cuota_ini,55.56,Cuota inicial cada 1000
+plan,autos,tasafija,18,fin,cuota_prom,55.56,Cuota promedio cada 1000
+plan,autos,tasafija,24,esp,tna,9.9,TNA
+plan,autos,tasafija,24,esp,qf,12,Gastos banco
+plan,autos,tasafija,24,esp,max,17000000,Monto maximo
+plan,autos,tasafija,24,esp,cuota_ini,47.83,Cuota inicial cada 1000
+plan,autos,tasafija,24,esp,cuota_prom,47.03,Cuota promedio cada 1000
+plan,autos,tasafija,24,fin,tna,0,TNA
+plan,autos,tasafija,24,fin,qf,13,Gastos banco
+plan,autos,tasafija,24,fin,max,19000000,Monto maximo
+plan,autos,tasafija,24,fin,cuota_ini,41.67,Cuota inicial cada 1000
+plan,autos,tasafija,24,fin,cuota_prom,41.67,Cuota promedio cada 1000
+plan,autos,tasafija,36,largo,tna,29.9,TNA
+plan,autos,tasafija,36,largo,qf,9.5,Gastos banco
+plan,autos,tasafija,36,largo,max,32000000,Monto maximo
+plan,autos,tasafija,36,largo,cuota_ini,47.63,Cuota inicial cada 1000
+plan,autos,tasafija,36,largo,cuota_prom,45.47,Cuota promedio cada 1000
+plan,autos,tasafija,48,largo,tna,29.9,TNA
+plan,autos,tasafija,48,largo,qf,10,Gastos banco
+plan,autos,tasafija,48,largo,max,32000000,Monto maximo
+plan,autos,tasafija,48,largo,cuota_ini,41.18,Cuota inicial cada 1000
+plan,autos,tasafija,48,largo,cuota_prom,39.12,Cuota promedio cada 1000
+plan,autos,uva,24,uvae,tna,0,TNA
+plan,autos,uva,24,uvae,qf,0,Gastos banco
+plan,autos,uva,24,uvae,max,19000000,Monto maximo
+plan,autos,uva,24,uvae,cuota_ini,41.67,Cuota inicial cada 1000
+plan,autos,uva,24,uvae,cuota_prom,41.67,Cuota promedio cada 1000
+plan,usados,tasafija,12,uvas,tna,25.5,TNA
+plan,usados,tasafija,12,uvas,qf,10,Gastos banco
+plan,usados,tasafija,12,uvas,cuota_ini,99.75,Cuota inicial cada 1000
+plan,usados,tasafija,12,uvas,cuota_prom,97.8,Cuota promedio cada 1000
+plan,usados,tasafija,12,uvas,ltv,50,LTV maximo
+plan,usados,tasafija,18,uvas,tna,31.5,TNA
+plan,usados,tasafija,18,uvas,qf,10,Gastos banco
+plan,usados,tasafija,18,uvas,cuota_ini,75.94,Cuota inicial cada 1000
+plan,usados,tasafija,18,uvas,cuota_prom,73.55,Cuota promedio cada 1000
+plan,usados,tasafija,18,uvas,ltv,50,LTV maximo
+plan,usados,tasafija,24,uvas,tna,35,TNA
+plan,usados,tasafija,24,uvas,qf,10,Gastos banco
+plan,usados,tasafija,24,uvas,cuota_ini,64.64,Cuota inicial cada 1000
+plan,usados,tasafija,24,uvas,cuota_prom,62.06,Cuota promedio cada 1000
+plan,usados,tasafija,24,uvas,ltv,50,LTV maximo
+plan,usados,tasafija,36,uvas,tna,38,TNA
+plan,usados,tasafija,36,uvas,qf,10,Gastos banco
+plan,usados,tasafija,36,uvas,cuota_ini,53.6,Cuota inicial cada 1000
+plan,usados,tasafija,36,uvas,cuota_prom,50.98,Cuota promedio cada 1000
+plan,usados,tasafija,36,uvas,ltv,50,LTV maximo
+plan,usados,uva,12,uvas,tna,5,TNA
+plan,usados,uva,12,uvas,qf,10,Gastos banco
+plan,usados,uva,12,uvas,cuota_ini,86.48,Cuota inicial cada 1000
+plan,usados,uva,12,uvas,cuota_prom,86.09,Cuota promedio cada 1000
+plan,usados,uva,12,uvas,ltv,50,LTV maximo
+plan,usados,uva,24,uvas,tna,12,TNA
+plan,usados,uva,24,uvas,qf,10,Gastos banco
+plan,usados,uva,24,uvas,cuota_ini,49.17,Cuota inicial cada 1000
+plan,usados,uva,24,uvas,cuota_prom,48.21,Cuota promedio cada 1000
+plan,usados,uva,24,uvas,ltv,50,LTV maximo
+prendario,,,12,,tna,48.5,TNA prendario
+prendario,,,12,,qf,0,Gastos banco prendario
+prendario,,,12,,cuota_ini,115.3,Cuota inicial cada 1000 prendario
+prendario,,,12,,cuota_prom,111.74,Cuota promedio cada 1000 prendario
+prendario,,,12,,ltv,70,LTV maximo prendario
+prendario,,,18,,tna,48.5,TNA prendario
+prendario,,,18,,qf,0,Gastos banco prendario
+prendario,,,18,,cuota_ini,87.75,Cuota inicial cada 1000 prendario
+prendario,,,18,,cuota_prom,84.24,Cuota promedio cada 1000 prendario
+prendario,,,18,,ltv,70,LTV maximo prendario
+prendario,,,24,,tna,48.5,TNA prendario
+prendario,,,24,,qf,0,Gastos banco prendario
+prendario,,,24,,cuota_ini,74.35,Cuota inicial cada 1000 prendario
+prendario,,,24,,cuota_prom,70.95,Cuota promedio cada 1000 prendario
+prendario,,,24,,ltv,70,LTV maximo prendario
+prendario,,,36,,tna,48.5,TNA prendario
+prendario,,,36,,qf,0,Gastos banco prendario
+prendario,,,36,,cuota_ini,61.68,Cuota inicial cada 1000 prendario
+prendario,,,36,,cuota_prom,58.53,Cuota promedio cada 1000 prendario
+prendario,,,36,,ltv,70,LTV maximo prendario
+leasing,,,36,,tna,0,TNA leasing
+leasing,,,36,,cuota_ini,55.77,Cuota inicial cada 1000 leasing
+leasing,,,36,,cuota_prom,55.77,Cuota promedio cada 1000 leasing
+leasing,,,36,,vr_max,30,Valor residual maximo
+leasing,,,48,,tna,0,TNA leasing
+leasing,,,48,,cuota_ini,50.92,Cuota inicial cada 1000 leasing
+leasing,,,48,,cuota_prom,50.92,Cuota promedio cada 1000 leasing
+leasing,,,48,,vr_max,20,Valor residual maximo
+leasing,,,60,,tna,0,TNA leasing
+leasing,,,60,,cuota_ini,48.47,Cuota inicial cada 1000 leasing
+leasing,,,60,,cuota_prom,46.81,Cuota promedio cada 1000 leasing
+leasing,,,60,,vr_max,15,Valor residual maximo

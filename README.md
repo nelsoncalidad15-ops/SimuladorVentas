@@ -18,12 +18,14 @@ Requisitos: Node.js 20 o superior.
 
 - `VWFS_DATA_TEMPLATE.csv`: plantilla de modelos y precios
 - `VWFS_CONFIG_TEMPLATE.csv`: plantilla completa de variables mensuales, tasas, topes, UVA, prenda y leasing
+- `VWFS_DATA_EDITABLE_TEMPLATE.csv`: version simple para editar modelos con columnas amigables
+- `VWFS_CONFIG_EDITABLE_TEMPLATE.csv`: version simple para editar parametros por grupo, categoria, linea, plazo y campana
 
 Para actualizar un nuevo mes:
 
 1. Duplica la sheet del mes anterior
-2. Cambia solo la columna `Valor`
-3. Mantén intacta la columna `Clave`
+2. En la plantilla editable, cambia solo `Valor`, `Precio_Lista` y `Elegible` cuando haga falta
+3. Mantén intactas las columnas estructurales como `Clave` o `Grupo/Categoria/Linea/Plazo/Campana/Variable`
 4. Pega la URL publicada del CSV en el panel de administración de la app
 
 ## Deploy en GitHub Pages
