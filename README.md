@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SimuladorVentas
 
-# Run and deploy your AI Studio app
+Simulador de ventas y financiacion VWFS para Autosol, construido con React y Vite.
 
-This contains everything you need to run your app locally.
+## Desarrollo local
 
-View your app in AI Studio: https://ai.studio/apps/5bb26833-afec-4f0f-8dee-dd0c691210ae
+Requisitos: Node.js 20 o superior.
 
-## Run Locally
+1. Instalar dependencias con `npm install`
+2. Iniciar el entorno local con `npm run dev`
 
-**Prerequisites:**  Node.js
+## Build
 
+- Generar build de produccion: `npm run build`
+- Validar TypeScript: `npm run lint`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deploy en GitHub Pages
+
+El repositorio ya quedo preparado para publicar automaticamente en GitHub Pages cada vez que hagas push a `main`.
+
+URL esperada del sitio:
+
+`https://nelsoncalidad15-ops.github.io/SimuladorVentas/`
+
+Si es la primera vez que lo activas en GitHub:
+
+1. Entra a `Settings > Pages`
+2. En `Source`, selecciona `GitHub Actions`
+3. Haz un nuevo push a `main` si GitHub no dispara el workflow automaticamente
