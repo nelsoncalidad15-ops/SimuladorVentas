@@ -44,14 +44,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media print {
+  html,
   body {
     background: white !important;
     overflow: visible !important;
     height: auto !important;
   }
+
+  #root,
   #root > div {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  #root > div > * {
     display: none !important;
   }
+
   .print-only {
     display: block !important;
     position: relative !important;
@@ -64,4 +73,3 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 15mm;
   }
 }
-
