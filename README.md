@@ -22,6 +22,8 @@ URL esperada del sitio:
 
 `https://nelsoncalidad15-ops.github.io/SimuladorVentas/`
 
+Ultima actualizacion de deploy: 2026-05-08
+
 Si es la primera vez que lo activas en GitHub:
 
 1. Entra a `Settings > Pages`
