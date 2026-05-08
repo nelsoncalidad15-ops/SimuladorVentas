@@ -1,0 +1,9 @@
+ID,Marca,Modelo,Precio,Categoria,Eligible_UVA,TNA_Fija,qF_Gastos_Banco,Cuota_1000_Ini,Cuota_1000_Prom
+AMA-2601,Amarok,Trendline TDI MT 4x2,51929800,amarok,NO,0,11.5,83.33,83.33
+AMA-2612,Amarok,Highline V6 AT 4x4,86397750,amarok,NO,0,12.0,55.56,55.56
+AMA-2613,Amarok,Extreme V6 AT 4x4,92427900,amarok,NO,0,11.0,41.67,41.67
+TER-2603,Tera,High 170TSi AT,45609400,autos,SI,0,10.5,83.33,83.33
+TCR-2602,T-Cross,Comfortline 200TSI AT,57735900,autos,SI,0,7.5,83.33,83.33
+POL-2603,Polo,Highline 170TSI AT,47341650,autos,SI,9.9,12.0,47.83,47.03
+TAO-2602,Taos,Highline 250TSI AT,65470200,autos,SI,0,0,41.67,41.67
+NIV-2601,Nivus,170TSI MT,43554600,autos,NO,29.9,9.5,47.63,45.47

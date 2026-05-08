@@ -1,0 +1,83 @@
+{
+  "currentMonth": "Mayo 2026",
+  "circularNumber": "28-26",
+  "uvaReference": 1333.96,
+  "defaultGastosAdmin": 6.0,
+  "defaultPrenda": 2.4,
+  "models": [
+    {"id": "AMA-2601", "brand": "Amarok", "name": "Trendline TDI MT 4x2", "price": 51929800, "category": "amarok"},
+    {"id": "AMA-2602", "brand": "Amarok", "name": "Trendline TDI MT 4x4", "price": 61894950, "category": "amarok"},
+    {"id": "AMA-2603", "brand": "Amarok", "name": "Comfortline TDI MT 4x2", "price": 59569000, "category": "amarok"},
+    {"id": "AMA-2605", "brand": "Amarok", "name": "Comfortline TDI AT 4x2", "price": 63546250, "category": "amarok"},
+    {"id": "AMA-2606", "brand": "Amarok", "name": "Comfortline V6 AT 4x4", "price": 73301700, "category": "amarok"},
+    {"id": "AMA-2607", "brand": "Amarok", "name": "Highline TDI MT 4x2", "price": 64236050, "category": "amarok"},
+    {"id": "AMA-2609", "brand": "Amarok", "name": "Highline TDI AT 4x2", "price": 70458850, "category": "amarok"},
+    {"id": "AMA-2612", "brand": "Amarok", "name": "Highline V6 AT 4x4", "price": 86397750, "category": "amarok"},
+    {"id": "AMA-2613", "brand": "Amarok", "name": "Extreme V6 AT 4x4", "price": 92427900, "category": "amarok"},
+    {"id": "AMA-2615", "brand": "Amarok", "name": "Black Style V6 AT 4x4", "price": 93430750, "category": "amarok"},
+    {"id": "NIV-2601", "brand": "Nivus", "name": "170TSI MT", "price": 43554600, "category": "autos"},
+    {"id": "NIV-2602", "brand": "Nivus", "name": "Comfortline 200TSI AT", "price": 48913850, "category": "autos"},
+    {"id": "NIV-2603", "brand": "Nivus", "name": "Highline 200TSI AT", "price": 52815650, "category": "autos"},
+    {"id": "POL-2601", "brand": "Polo", "name": "Track MSI MT", "price": 37567500, "category": "autos"},
+    {"id": "POL-2603", "brand": "Polo", "name": "Highline 170TSI AT", "price": 47341650, "category": "autos"},
+    {"id": "SAV-2601", "brand": "Saveiro", "name": "Trendline CS MSI MT", "price": 43098250, "category": "autos"},
+    {"id": "TAO-2601", "brand": "Taos", "name": "Comfortline 250TSI AT", "price": 57511950, "category": "autos"},
+    {"id": "TAO-2602", "brand": "Taos", "name": "Highline 250TSI AT", "price": 65470200, "category": "autos"},
+    {"id": "TCR-2601", "brand": "T-Cross", "name": "Trendline 170TSI MT", "price": 50766550, "category": "autos"},
+    {"id": "TCR-2602", "brand": "T-Cross", "name": "Comfortline 200TSI AT", "price": 57735900, "category": "autos"},
+    {"id": "TER-2601", "brand": "Tera", "name": "Trend MSI MT", "price": 36755250, "category": "autos"}
+  ],
+  "eligibleModels": ["TER-2603", "TER-2604", "TCR-2602", "TCR-2603", "TCR-2604", "POL-2603", "POL-2605", "TAO-2602", "TAO-2603", "NIV-2603", "NIV-2604"],
+  "plans": {
+    "amarok": {
+      "tasafija": [
+        {"months": 12, "campaign": "am", "tna": 0, "cuotaIni": 83.33, "cuotaProm": 83.33, "qF": 11.50, "max": 40000000},
+        {"months": 12, "campaign": "sinq", "tna": 0, "cuotaIni": 83.33, "cuotaProm": 83.33, "qF": 0, "max": 20000000, "isSinQ": true},
+        {"months": 18, "campaign": "am", "tna": 0, "cuotaIni": 55.56, "cuotaProm": 55.56, "qF": 12.00, "max": 26000000},
+        {"months": 24, "campaign": "am", "tna": 0, "cuotaIni": 41.67, "cuotaProm": 41.67, "qF": 11.00, "max": 18000000}
+      ],
+      "uva": [
+        {"months": 24, "campaign": "uvae", "tna": 0, "cuotaIni": 41.67, "cuotaProm": 41.67, "qF": 0, "max": 20000000, "isUva": true, "isSinQ": true}
+      ]
+    },
+    "autos": {
+      "tasafija": [
+        {"months": 12, "campaign": "esp", "tna": 0, "cuotaIni": 83.33, "cuotaProm": 83.33, "qF": 10.50, "max": 25000000},
+        {"months": 12, "campaign": "fin", "tna": 0, "cuotaIni": 83.33, "cuotaProm": 83.33, "qF": 7.50, "max": 28000000, "onlyEligible": true},
+        {"months": 12, "campaign": "sinq", "tna": 0, "cuotaIni": 83.33, "cuotaProm": 83.33, "qF": 0, "max": 17000000, "onlyEligible": true, "isSinQ": true},
+        {"months": 18, "campaign": "esp", "tna": 0, "cuotaIni": 55.56, "cuotaProm": 55.56, "qF": 12.00, "max": 17000000},
+        {"months": 18, "campaign": "fin", "tna": 0, "cuotaIni": 55.56, "cuotaProm": 55.56, "qF": 11.00, "max": 22000000, "onlyEligible": true},
+        {"months": 24, "campaign": "esp", "tna": 9.9, "cuotaIni": 47.83, "cuotaProm": 47.03, "qF": 12.00, "max": 17000000},
+        {"months": 24, "campaign": "fin", "tna": 0, "cuotaIni": 41.67, "cuotaProm": 41.67, "qF": 13.00, "max": 19000000, "onlyEligible": true},
+        {"months": 36, "campaign": "largo", "tna": 29.9, "cuotaIni": 47.63, "cuotaProm": 45.47, "qF": 9.50, "max": 32000000},
+        {"months": 48, "campaign": "largo", "tna": 29.9, "cuotaIni": 41.18, "cuotaProm": 39.12, "qF": 10.00, "max": 32000000}
+      ],
+      "uva": [
+        {"months": 24, "campaign": "uvae", "tna": 0, "cuotaIni": 41.67, "cuotaProm": 41.67, "qF": 0, "max": 19000000, "isUva": true, "isSinQ": true, "onlyEligible": true}
+      ]
+    },
+    "usados": {
+      "tasafija": [
+        {"months": 12, "campaign": "uvas", "tna": 25.5, "cuotaIni": 99.75, "cuotaProm": 97.80, "qF": 10.00, "ltv": 50},
+        {"months": 18, "campaign": "uvas", "tna": 31.5, "cuotaIni": 75.94, "cuotaProm": 73.55, "qF": 10.00, "ltv": 50},
+        {"months": 24, "campaign": "uvas", "tna": 35.0, "cuotaIni": 64.64, "cuotaProm": 62.06, "qF": 10.00, "ltv": 50},
+        {"months": 36, "campaign": "uvas", "tna": 38.0, "cuotaIni": 53.60, "cuotaProm": 50.98, "qF": 10.00, "ltv": 50}
+      ],
+      "uva": [
+        {"months": 12, "campaign": "uvas", "tna": 5.0, "cuotaIni": 86.48, "cuotaProm": 86.09, "qF": 10.00, "ltv": 50, "isUva": true},
+        {"months": 24, "campaign": "uvas", "tna": 12.0, "cuotaIni": 49.17, "cuotaProm": 48.21, "qF": 10.00, "ltv": 50, "isUva": true}
+      ]
+    }
+  },
+  "prendarioUnico": [
+    {"months": 12, "tna": 48.5, "cuotaIni": 115.30, "cuotaProm": 111.74, "qF": 0, "ltv": 70},
+    {"months": 18, "tna": 48.5, "cuotaIni": 87.75, "cuotaProm": 84.24, "qF": 0, "ltv": 70},
+    {"months": 24, "tna": 48.5, "cuotaIni": 74.35, "cuotaProm": 70.95, "qF": 0, "ltv": 70},
+    {"months": 36, "tna": 48.5, "cuotaIni": 61.68, "cuotaProm": 58.53, "qF": 0, "ltv": 70}
+  ],
+  "leasing": [
+    {"months": 36, "tna": 0, "cuotaIni": 55.77, "cuotaProm": 55.77, "vrMax": 30},
+    {"months": 48, "tna": 0, "cuotaIni": 50.92, "cuotaProm": 50.92, "vrMax": 20},
+    {"months": 60, "tna": 0, "cuotaIni": 48.47, "cuotaProm": 46.81, "vrMax": 15}
+  ]
+}

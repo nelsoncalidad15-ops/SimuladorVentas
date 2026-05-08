@@ -1,0 +1,14 @@
+# INSTRUCCIONES GOOGLE SHEETS:
+# 1. Crea una nueva Google Sheet.
+# 2. Copia estos encabezados exactos en la primera fila (A1, B1, etc):
+#    ID | Marca | Modelo | Precio | Categoria
+# 3. Completa los datos. El PRECIO debe ser solo números.
+# 4. En Google Sheets: Archivo -> Compartir -> Compartir con otros -> Cambiar a "Cualquier persona con el enlace".
+# 5. Copia la URL de la barra de direcciones y pégala en el Panel de Administración de la App.
+
+ID,Marca,Modelo,Precio,Categoria
+AMA-2601,Amarok,Trendline TDI MT 4x2,51929800,amarok
+AMA-2602,Amarok,Trendline TDI MT 4x4,61894950,amarok
+AMA-2603,Amarok,Comfortline TDI MT 4x2,59569000,amarok
+POL-2601,Polo,Track MSI MT,37567500,autos
+NIV-2601,Nivus,170TSI MT,43554600,autos
