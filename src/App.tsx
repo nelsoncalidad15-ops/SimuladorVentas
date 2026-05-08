@@ -115,41 +115,80 @@ export default function App() {
     
     // Deep clone appConfig to avoid mutations
     const newConfig = JSON.parse(JSON.stringify(appConfig));
-    
-    newConfig.circularNumber = configParams.circular_nro || newConfig.circularNumber;
-    newConfig.uvaReference = parseFloat(configParams.uva_referencia) || newConfig.uvaReference;
-    newConfig.sellPercent = parseFloat(configParams.comision_vendedor) || newConfig.sellPercent;
-    newConfig.defaultGastosAdmin = parseFloat(configParams.gastos_admin) || newConfig.defaultGastosAdmin;
-    newConfig.defaultPrenda = parseFloat(configParams.prenda) || newConfig.defaultPrenda;
-    newConfig.ivaQuebranto = parseFloat(configParams.iva_quebranto) || 21;
+
+    const getTextParam = (key: string) => {
+      const value = configParams[key];
+      if (value === undefined || value === null) return null;
+      const text = String(value).trim();
+      return text.length > 0 ? text : null;
+    };
+
+    const getNumberParam = (key: string) => {
+      const value = configParams[key];
+      if (value === undefined || value === null || value === "") return null;
+
+      let normalized = String(value).trim();
+      if (normalized.includes(",") && normalized.includes(".")) {
+        normalized = normalized.replace(/\./g, "").replace(",", ".");
+      } else if (normalized.includes(",")) {
+        normalized = normalized.replace(",", ".");
+      }
+
+      const parsed = Number(normalized);
+      return Number.isFinite(parsed) ? parsed : null;
+    };
+
+    const applyNumberOverride = (target: any, prop: string, keys: string[]) => {
+      for (const key of keys) {
+        const value = getNumberParam(key);
+        if (value !== null) {
+          target[prop] = value;
+          return;
+        }
+      }
+    };
+
+    const buildPlanBaseKey = (...parts: Array<string | number | undefined>) =>
+      parts
+        .filter((part) => part !== undefined && part !== null && String(part).trim() !== "")
+        .map((part) => String(part).trim().toLowerCase())
+        .join("_");
+
+    newConfig.currentMonth = getTextParam("current_month") || newConfig.currentMonth;
+    newConfig.circularNumber = getTextParam("circular_nro") || newConfig.circularNumber;
+    newConfig.uvaReference = getNumberParam("uva_referencia") ?? newConfig.uvaReference;
+    newConfig.sellPercent = getNumberParam("comision_vendedor") ?? newConfig.sellPercent;
+    newConfig.defaultGastosAdmin = getNumberParam("gastos_admin") ?? newConfig.defaultGastosAdmin;
+    newConfig.defaultPrenda = getNumberParam("prenda") ?? newConfig.defaultPrenda;
+    newConfig.ivaQuebranto = getNumberParam("iva_quebranto") ?? newConfig.ivaQuebranto ?? 21;
     
     if (configParams.modelos_elegibles) {
       newConfig.eligibleModels = configParams.modelos_elegibles.split(",").map((s: string) => s.trim());
     }
     
-    // Helper to update plan parameters across all matching months
-    const updatePlansByMonth = (planList: any[]) => {
+    const updatePlanList = (planList: any[], sectionPrefix: string[]) => {
       planList.forEach(p => {
+        const baseKey = buildPlanBaseKey(...sectionPrefix, p.months, p.campaign);
         const months = p.months;
-        if (configParams[`tna_${months}`] !== undefined) p.tna = parseFloat(configParams[`tna_${months}`]);
-        if (configParams[`qf_${months}`] !== undefined) p.qF = parseFloat(configParams[`qf_${months}`]);
-        if (configParams[`monto_max_${months}`] !== undefined) p.max = parseFloat(configParams[`monto_max_${months}`]);
-        if (configParams[`cuota_ini_${months}`] !== undefined) p.cuotaIni = parseFloat(configParams[`cuota_ini_${months}`]);
-        if (configParams[`cuota_prom_${months}`] !== undefined) p.cuotaProm = parseFloat(configParams[`cuota_prom_${months}`]);
-        if (configParams[`ltv_${months}`] !== undefined) p.ltv = parseFloat(configParams[`ltv_${months}`]);
-        if (configParams[`vrmax_${months}`] !== undefined) p.vrMax = parseFloat(configParams[`vrmax_${months}`]);
+
+        applyNumberOverride(p, "tna", [`${baseKey}_tna`, `tna_${months}`]);
+        applyNumberOverride(p, "qF", [`${baseKey}_qf`, `qf_${months}`]);
+        applyNumberOverride(p, "max", [`${baseKey}_max`, `${baseKey}_monto_max`, `monto_max_${months}`]);
+        applyNumberOverride(p, "cuotaIni", [`${baseKey}_cuota_ini`, `${baseKey}_cuotaini`, `cuota_ini_${months}`]);
+        applyNumberOverride(p, "cuotaProm", [`${baseKey}_cuota_prom`, `${baseKey}_cuotaprom`, `cuota_prom_${months}`]);
+        applyNumberOverride(p, "ltv", [`${baseKey}_ltv`, `ltv_${months}`]);
+        applyNumberOverride(p, "vrMax", [`${baseKey}_vr_max`, `${baseKey}_vrmax`, `vrmax_${months}`]);
       });
     };
 
-    // Update plans for all sections
     Object.keys(newConfig.plans).forEach(catKey => {
       Object.keys(newConfig.plans[catKey]).forEach(lineKey => {
-        updatePlansByMonth(newConfig.plans[catKey][lineKey]);
+        updatePlanList(newConfig.plans[catKey][lineKey], ["plan", catKey, lineKey]);
       });
     });
 
-    if (newConfig.prendarioUnico) updatePlansByMonth(newConfig.prendarioUnico);
-    if (newConfig.leasing) updatePlansByMonth(newConfig.leasing);
+    if (newConfig.prendarioUnico) updatePlanList(newConfig.prendarioUnico, ["prendario"]);
+    if (newConfig.leasing) updatePlanList(newConfig.leasing, ["leasing"]);
 
     return newConfig;
   }, [configParams]);
@@ -402,7 +441,7 @@ export default function App() {
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-tight">
             <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-            Sync: {appConfig.currentMonth}
+              Sync: {activeConfig.currentMonth}
           </div>
 
           <button 
@@ -491,7 +530,7 @@ export default function App() {
                    <p className="text-[8px] font-bold text-gray-500 uppercase tracking-widest leading-none">VW Financial Services</p>
                 </div>
             </div>
-            <div className="text-[9px] text-gray-500 mb-2 italic font-black uppercase tracking-tighter">CIRCULAR: {appConfig.circularNumber}</div>
+            <div className="text-[9px] text-gray-500 mb-2 italic font-black uppercase tracking-tighter">CIRCULAR: {activeConfig.circularNumber}</div>
             <div className="h-1 w-full bg-white/10 rounded-full overflow-hidden">
               <div className="h-full bg-sleek-accent w-[85%]"></div>
             </div>
@@ -962,18 +1001,18 @@ export default function App() {
                       </li>
                       <li className="flex gap-3">
                          <div className="shrink-0 w-5 h-5 bg-vw-blue text-white text-[10px] font-bold rounded-full flex items-center justify-center">2</div>
-                         <p className="text-[11px] text-slate-600 leading-snug">Copia la estructura JSON del editor principal.</p>
+                         <p className="text-[11px] text-slate-600 leading-snug">Copia la plantilla de parámetros mensuales a una Google Sheet separada.</p>
                       </li>
                       <li className="flex gap-3">
                          <div className="shrink-0 w-5 h-5 bg-vw-blue text-white text-[10px] font-bold rounded-full flex items-center justify-center">3</div>
-                         <p className="text-[11px] text-slate-600 leading-snug">Pega el nuevo JSON en el archivo <code className="text-vw-blue bg-blue-50 px-1">data/config.json</code> para actualizar a todos los asesores.</p>
+                         <p className="text-[11px] text-slate-600 leading-snug">Modifica solo la columna <code className="text-vw-blue bg-blue-50 px-1">Valor</code> cada mes, manteniendo las claves iguales para que la app lea tasas, topes, UVA, prenda y campañas.</p>
                       </li>
                    </ol>
                  </div>
 
                  <div className="p-4 bg-amber-50 border border-amber-100 rounded-xl">
                     <p className="text-[10px] text-amber-700 leading-relaxed">
-                      <b>Advertencia:</b> Cualquier error de formato (una coma faltante) en el JSON podría romper la calculadora. Siempre haz una copia antes de editar.
+                      <b>Advertencia:</b> No cambies los nombres de la columna <b>Clave</b> ni las claves internas de cada plan. Solo actualiza valores y conserva una copia del mes anterior.
                     </p>
                  </div>
               </div>
@@ -985,7 +1024,7 @@ export default function App() {
                   </div>
                   <textarea 
                     className="w-full h-full font-mono text-[11px] p-6 bg-transparent text-emerald-400 outline-none resize-none leading-relaxed"
-                    value={JSON.stringify(appConfig, null, 2)}
+                    value={JSON.stringify(activeConfig, null, 2)}
                     readOnly
                   />
                 </div>
@@ -995,7 +1034,7 @@ export default function App() {
             <div className="p-6 border-t bg-white flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                  Circular Activa: {appConfig.currentMonth}
+                  Circular Activa: {activeConfig.currentMonth}
                 </div>
               </div>
               <div className="flex gap-3">
@@ -1007,8 +1046,8 @@ export default function App() {
                 </button>
                 <button 
                   onClick={() => {
-                    navigator.clipboard.writeText(JSON.stringify(appConfig, null, 2));
-                    alert("¡Estructura de Base de Datos copiada satisfactoriamente!");
+                    navigator.clipboard.writeText(JSON.stringify(activeConfig, null, 2));
+                    alert("¡Configuración activa copiada satisfactoriamente!");
                   }}
                   className="px-8 py-2.5 bg-vw-blue text-white rounded-xl text-xs font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all active:translate-y-0 flex items-center gap-2"
                 >
@@ -1136,7 +1175,7 @@ export default function App() {
             La presente simulación técnica es de carácter informativo y no constituye una oferta contractual ni tiene valor legal. 
             Las condiciones financieras (Tasas, Comisiones, Cuotas) están sujetas a modificaciones de acuerdo a las circulares operativas vigentes al momento de la liquidación del crédito por parte de Volkswagen Financial Services. 
             Todas las operaciones están sujetas a aprobación crediticia. Los valores expresados pueden variar según perfil del cliente y gastos de otorgamiento no contemplados en esta simulación simplificada. 
-            Circular Ref: {appConfig.circularNumber} ({appConfig.currentMonth}) - Autosol S.A.
+            Circular Ref: {activeConfig.circularNumber} ({activeConfig.currentMonth}) - Autosol S.A.
           </p>
           <div className="flex justify-between items-end pt-12">
              <div className="w-48 h-px bg-slate-300"></div>
@@ -1147,4 +1186,3 @@ export default function App() {
     </div>
   );
 }
-

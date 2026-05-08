@@ -1,0 +1,145 @@
+Clave,Valor,Descripcion
+current_month,Mayo 2026,Mes visible en la interfaz
+circular_nro,28-26,Numero de circular vigente
+uva_referencia,1333.96,Valor de referencia UVA
+gastos_admin,6.0,Porcentaje base de gastos administrativos
+prenda,2.4,Porcentaje base de prenda
+iva_quebranto,21,IVA aplicado al quebranto
+modelos_elegibles,"TER-2603,TER-2604,TCR-2602,TCR-2603,TCR-2604,POL-2603,POL-2605,TAO-2602,TAO-2603,NIV-2603,NIV-2604",IDs habilitados para planes elegibles/UVA
+plan_amarok_tasafija_12_am_tna,0,TNA Amarok tasa fija 12 meses campaña AM
+plan_amarok_tasafija_12_am_qf,11.5,Gastos bancarios Amarok tasa fija 12 meses campaña AM
+plan_amarok_tasafija_12_am_max,40000000,Monto maximo Amarok tasa fija 12 meses campaña AM
+plan_amarok_tasafija_12_am_cuota_ini,83.33,Cuota inicial por cada 1000 Amarok tasa fija 12 meses campaña AM
+plan_amarok_tasafija_12_am_cuota_prom,83.33,Cuota promedio por cada 1000 Amarok tasa fija 12 meses campaña AM
+plan_amarok_tasafija_12_sinq_tna,0,TNA Amarok tasa fija 12 meses campaña sinq
+plan_amarok_tasafija_12_sinq_qf,0,Gastos bancarios Amarok tasa fija 12 meses campaña sinq
+plan_amarok_tasafija_12_sinq_max,20000000,Monto maximo Amarok tasa fija 12 meses campaña sinq
+plan_amarok_tasafija_12_sinq_cuota_ini,83.33,Cuota inicial por cada 1000 Amarok tasa fija 12 meses campaña sinq
+plan_amarok_tasafija_12_sinq_cuota_prom,83.33,Cuota promedio por cada 1000 Amarok tasa fija 12 meses campaña sinq
+plan_amarok_tasafija_18_am_tna,0,TNA Amarok tasa fija 18 meses campaña AM
+plan_amarok_tasafija_18_am_qf,12,Gastos bancarios Amarok tasa fija 18 meses campaña AM
+plan_amarok_tasafija_18_am_max,26000000,Monto maximo Amarok tasa fija 18 meses campaña AM
+plan_amarok_tasafija_18_am_cuota_ini,55.56,Cuota inicial por cada 1000 Amarok tasa fija 18 meses campaña AM
+plan_amarok_tasafija_18_am_cuota_prom,55.56,Cuota promedio por cada 1000 Amarok tasa fija 18 meses campaña AM
+plan_amarok_tasafija_24_am_tna,0,TNA Amarok tasa fija 24 meses campaña AM
+plan_amarok_tasafija_24_am_qf,11,Gastos bancarios Amarok tasa fija 24 meses campaña AM
+plan_amarok_tasafija_24_am_max,18000000,Monto maximo Amarok tasa fija 24 meses campaña AM
+plan_amarok_tasafija_24_am_cuota_ini,41.67,Cuota inicial por cada 1000 Amarok tasa fija 24 meses campaña AM
+plan_amarok_tasafija_24_am_cuota_prom,41.67,Cuota promedio por cada 1000 Amarok tasa fija 24 meses campaña AM
+plan_amarok_uva_24_uvae_tna,0,TNA Amarok UVA 24 meses campaña UVAE
+plan_amarok_uva_24_uvae_qf,0,Gastos bancarios Amarok UVA 24 meses campaña UVAE
+plan_amarok_uva_24_uvae_max,20000000,Monto maximo Amarok UVA 24 meses campaña UVAE
+plan_amarok_uva_24_uvae_cuota_ini,41.67,Cuota inicial por cada 1000 Amarok UVA 24 meses campaña UVAE
+plan_amarok_uva_24_uvae_cuota_prom,41.67,Cuota promedio por cada 1000 Amarok UVA 24 meses campaña UVAE
+plan_autos_tasafija_12_esp_tna,0,TNA Autos tasa fija 12 meses campaña ESP
+plan_autos_tasafija_12_esp_qf,10.5,Gastos bancarios Autos tasa fija 12 meses campaña ESP
+plan_autos_tasafija_12_esp_max,25000000,Monto maximo Autos tasa fija 12 meses campaña ESP
+plan_autos_tasafija_12_esp_cuota_ini,83.33,Cuota inicial por cada 1000 Autos tasa fija 12 meses campaña ESP
+plan_autos_tasafija_12_esp_cuota_prom,83.33,Cuota promedio por cada 1000 Autos tasa fija 12 meses campaña ESP
+plan_autos_tasafija_12_fin_tna,0,TNA Autos tasa fija 12 meses campaña FIN
+plan_autos_tasafija_12_fin_qf,7.5,Gastos bancarios Autos tasa fija 12 meses campaña FIN
+plan_autos_tasafija_12_fin_max,28000000,Monto maximo Autos tasa fija 12 meses campaña FIN
+plan_autos_tasafija_12_fin_cuota_ini,83.33,Cuota inicial por cada 1000 Autos tasa fija 12 meses campaña FIN
+plan_autos_tasafija_12_fin_cuota_prom,83.33,Cuota promedio por cada 1000 Autos tasa fija 12 meses campaña FIN
+plan_autos_tasafija_12_sinq_tna,0,TNA Autos tasa fija 12 meses campaña SINQ
+plan_autos_tasafija_12_sinq_qf,0,Gastos bancarios Autos tasa fija 12 meses campaña SINQ
+plan_autos_tasafija_12_sinq_max,17000000,Monto maximo Autos tasa fija 12 meses campaña SINQ
+plan_autos_tasafija_12_sinq_cuota_ini,83.33,Cuota inicial por cada 1000 Autos tasa fija 12 meses campaña SINQ
+plan_autos_tasafija_12_sinq_cuota_prom,83.33,Cuota promedio por cada 1000 Autos tasa fija 12 meses campaña SINQ
+plan_autos_tasafija_18_esp_tna,0,TNA Autos tasa fija 18 meses campaña ESP
+plan_autos_tasafija_18_esp_qf,12,Gastos bancarios Autos tasa fija 18 meses campaña ESP
+plan_autos_tasafija_18_esp_max,17000000,Monto maximo Autos tasa fija 18 meses campaña ESP
+plan_autos_tasafija_18_esp_cuota_ini,55.56,Cuota inicial por cada 1000 Autos tasa fija 18 meses campaña ESP
+plan_autos_tasafija_18_esp_cuota_prom,55.56,Cuota promedio por cada 1000 Autos tasa fija 18 meses campaña ESP
+plan_autos_tasafija_18_fin_tna,0,TNA Autos tasa fija 18 meses campaña FIN
+plan_autos_tasafija_18_fin_qf,11,Gastos bancarios Autos tasa fija 18 meses campaña FIN
+plan_autos_tasafija_18_fin_max,22000000,Monto maximo Autos tasa fija 18 meses campaña FIN
+plan_autos_tasafija_18_fin_cuota_ini,55.56,Cuota inicial por cada 1000 Autos tasa fija 18 meses campaña FIN
+plan_autos_tasafija_18_fin_cuota_prom,55.56,Cuota promedio por cada 1000 Autos tasa fija 18 meses campaña FIN
+plan_autos_tasafija_24_esp_tna,9.9,TNA Autos tasa fija 24 meses campaña ESP
+plan_autos_tasafija_24_esp_qf,12,Gastos bancarios Autos tasa fija 24 meses campaña ESP
+plan_autos_tasafija_24_esp_max,17000000,Monto maximo Autos tasa fija 24 meses campaña ESP
+plan_autos_tasafija_24_esp_cuota_ini,47.83,Cuota inicial por cada 1000 Autos tasa fija 24 meses campaña ESP
+plan_autos_tasafija_24_esp_cuota_prom,47.03,Cuota promedio por cada 1000 Autos tasa fija 24 meses campaña ESP
+plan_autos_tasafija_24_fin_tna,0,TNA Autos tasa fija 24 meses campaña FIN
+plan_autos_tasafija_24_fin_qf,13,Gastos bancarios Autos tasa fija 24 meses campaña FIN
+plan_autos_tasafija_24_fin_max,19000000,Monto maximo Autos tasa fija 24 meses campaña FIN
+plan_autos_tasafija_24_fin_cuota_ini,41.67,Cuota inicial por cada 1000 Autos tasa fija 24 meses campaña FIN
+plan_autos_tasafija_24_fin_cuota_prom,41.67,Cuota promedio por cada 1000 Autos tasa fija 24 meses campaña FIN
+plan_autos_tasafija_36_largo_tna,29.9,TNA Autos tasa fija 36 meses campaña LARGO
+plan_autos_tasafija_36_largo_qf,9.5,Gastos bancarios Autos tasa fija 36 meses campaña LARGO
+plan_autos_tasafija_36_largo_max,32000000,Monto maximo Autos tasa fija 36 meses campaña LARGO
+plan_autos_tasafija_36_largo_cuota_ini,47.63,Cuota inicial por cada 1000 Autos tasa fija 36 meses campaña LARGO
+plan_autos_tasafija_36_largo_cuota_prom,45.47,Cuota promedio por cada 1000 Autos tasa fija 36 meses campaña LARGO
+plan_autos_tasafija_48_largo_tna,29.9,TNA Autos tasa fija 48 meses campaña LARGO
+plan_autos_tasafija_48_largo_qf,10,Gastos bancarios Autos tasa fija 48 meses campaña LARGO
+plan_autos_tasafija_48_largo_max,32000000,Monto maximo Autos tasa fija 48 meses campaña LARGO
+plan_autos_tasafija_48_largo_cuota_ini,41.18,Cuota inicial por cada 1000 Autos tasa fija 48 meses campaña LARGO
+plan_autos_tasafija_48_largo_cuota_prom,39.12,Cuota promedio por cada 1000 Autos tasa fija 48 meses campaña LARGO
+plan_autos_uva_24_uvae_tna,0,TNA Autos UVA 24 meses campaña UVAE
+plan_autos_uva_24_uvae_qf,0,Gastos bancarios Autos UVA 24 meses campaña UVAE
+plan_autos_uva_24_uvae_max,19000000,Monto maximo Autos UVA 24 meses campaña UVAE
+plan_autos_uva_24_uvae_cuota_ini,41.67,Cuota inicial por cada 1000 Autos UVA 24 meses campaña UVAE
+plan_autos_uva_24_uvae_cuota_prom,41.67,Cuota promedio por cada 1000 Autos UVA 24 meses campaña UVAE
+plan_usados_tasafija_12_uvas_tna,25.5,TNA Usados tasa fija 12 meses campaña UVAS
+plan_usados_tasafija_12_uvas_qf,10,Gastos bancarios Usados tasa fija 12 meses campaña UVAS
+plan_usados_tasafija_12_uvas_cuota_ini,99.75,Cuota inicial por cada 1000 Usados tasa fija 12 meses campaña UVAS
+plan_usados_tasafija_12_uvas_cuota_prom,97.8,Cuota promedio por cada 1000 Usados tasa fija 12 meses campaña UVAS
+plan_usados_tasafija_12_uvas_ltv,50,LTV maximo Usados tasa fija 12 meses campaña UVAS
+plan_usados_tasafija_18_uvas_tna,31.5,TNA Usados tasa fija 18 meses campaña UVAS
+plan_usados_tasafija_18_uvas_qf,10,Gastos bancarios Usados tasa fija 18 meses campaña UVAS
+plan_usados_tasafija_18_uvas_cuota_ini,75.94,Cuota inicial por cada 1000 Usados tasa fija 18 meses campaña UVAS
+plan_usados_tasafija_18_uvas_cuota_prom,73.55,Cuota promedio por cada 1000 Usados tasa fija 18 meses campaña UVAS
+plan_usados_tasafija_18_uvas_ltv,50,LTV maximo Usados tasa fija 18 meses campaña UVAS
+plan_usados_tasafija_24_uvas_tna,35,TNA Usados tasa fija 24 meses campaña UVAS
+plan_usados_tasafija_24_uvas_qf,10,Gastos bancarios Usados tasa fija 24 meses campaña UVAS
+plan_usados_tasafija_24_uvas_cuota_ini,64.64,Cuota inicial por cada 1000 Usados tasa fija 24 meses campaña UVAS
+plan_usados_tasafija_24_uvas_cuota_prom,62.06,Cuota promedio por cada 1000 Usados tasa fija 24 meses campaña UVAS
+plan_usados_tasafija_24_uvas_ltv,50,LTV maximo Usados tasa fija 24 meses campaña UVAS
+plan_usados_tasafija_36_uvas_tna,38,TNA Usados tasa fija 36 meses campaña UVAS
+plan_usados_tasafija_36_uvas_qf,10,Gastos bancarios Usados tasa fija 36 meses campaña UVAS
+plan_usados_tasafija_36_uvas_cuota_ini,53.6,Cuota inicial por cada 1000 Usados tasa fija 36 meses campaña UVAS
+plan_usados_tasafija_36_uvas_cuota_prom,50.98,Cuota promedio por cada 1000 Usados tasa fija 36 meses campaña UVAS
+plan_usados_tasafija_36_uvas_ltv,50,LTV maximo Usados tasa fija 36 meses campaña UVAS
+plan_usados_uva_12_uvas_tna,5,TNA Usados UVA 12 meses campaña UVAS
+plan_usados_uva_12_uvas_qf,10,Gastos bancarios Usados UVA 12 meses campaña UVAS
+plan_usados_uva_12_uvas_cuota_ini,86.48,Cuota inicial por cada 1000 Usados UVA 12 meses campaña UVAS
+plan_usados_uva_12_uvas_cuota_prom,86.09,Cuota promedio por cada 1000 Usados UVA 12 meses campaña UVAS
+plan_usados_uva_12_uvas_ltv,50,LTV maximo Usados UVA 12 meses campaña UVAS
+plan_usados_uva_24_uvas_tna,12,TNA Usados UVA 24 meses campaña UVAS
+plan_usados_uva_24_uvas_qf,10,Gastos bancarios Usados UVA 24 meses campaña UVAS
+plan_usados_uva_24_uvas_cuota_ini,49.17,Cuota inicial por cada 1000 Usados UVA 24 meses campaña UVAS
+plan_usados_uva_24_uvas_cuota_prom,48.21,Cuota promedio por cada 1000 Usados UVA 24 meses campaña UVAS
+plan_usados_uva_24_uvas_ltv,50,LTV maximo Usados UVA 24 meses campaña UVAS
+prendario_12_tna,48.5,TNA Prendario unico 12 meses
+prendario_12_qf,0,Gastos bancarios Prendario unico 12 meses
+prendario_12_cuota_ini,115.3,Cuota inicial por cada 1000 Prendario unico 12 meses
+prendario_12_cuota_prom,111.74,Cuota promedio por cada 1000 Prendario unico 12 meses
+prendario_12_ltv,70,LTV maximo Prendario unico 12 meses
+prendario_18_tna,48.5,TNA Prendario unico 18 meses
+prendario_18_qf,0,Gastos bancarios Prendario unico 18 meses
+prendario_18_cuota_ini,87.75,Cuota inicial por cada 1000 Prendario unico 18 meses
+prendario_18_cuota_prom,84.24,Cuota promedio por cada 1000 Prendario unico 18 meses
+prendario_18_ltv,70,LTV maximo Prendario unico 18 meses
+prendario_24_tna,48.5,TNA Prendario unico 24 meses
+prendario_24_qf,0,Gastos bancarios Prendario unico 24 meses
+prendario_24_cuota_ini,74.35,Cuota inicial por cada 1000 Prendario unico 24 meses
+prendario_24_cuota_prom,70.95,Cuota promedio por cada 1000 Prendario unico 24 meses
+prendario_24_ltv,70,LTV maximo Prendario unico 24 meses
+prendario_36_tna,48.5,TNA Prendario unico 36 meses
+prendario_36_qf,0,Gastos bancarios Prendario unico 36 meses
+prendario_36_cuota_ini,61.68,Cuota inicial por cada 1000 Prendario unico 36 meses
+prendario_36_cuota_prom,58.53,Cuota promedio por cada 1000 Prendario unico 36 meses
+prendario_36_ltv,70,LTV maximo Prendario unico 36 meses
+leasing_36_tna,0,TNA Leasing 36 meses
+leasing_36_cuota_ini,55.77,Cuota inicial por cada 1000 Leasing 36 meses
+leasing_36_cuota_prom,55.77,Cuota promedio por cada 1000 Leasing 36 meses
+leasing_36_vr_max,30,Valor residual maximo Leasing 36 meses
+leasing_48_tna,0,TNA Leasing 48 meses
+leasing_48_cuota_ini,50.92,Cuota inicial por cada 1000 Leasing 48 meses
+leasing_48_cuota_prom,50.92,Cuota promedio por cada 1000 Leasing 48 meses
+leasing_48_vr_max,20,Valor residual maximo Leasing 48 meses
+leasing_60_tna,0,TNA Leasing 60 meses
+leasing_60_cuota_ini,48.47,Cuota inicial por cada 1000 Leasing 60 meses
+leasing_60_cuota_prom,46.81,Cuota promedio por cada 1000 Leasing 60 meses
+leasing_60_vr_max,15,Valor residual maximo Leasing 60 meses

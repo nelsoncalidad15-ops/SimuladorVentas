@@ -14,6 +14,18 @@ Requisitos: Node.js 20 o superior.
 - Generar build de produccion: `npm run build`
 - Validar TypeScript: `npm run lint`
 
+## Plantillas para Google Sheets
+
+- `VWFS_DATA_TEMPLATE.csv`: plantilla de modelos y precios
+- `VWFS_CONFIG_TEMPLATE.csv`: plantilla completa de variables mensuales, tasas, topes, UVA, prenda y leasing
+
+Para actualizar un nuevo mes:
+
+1. Duplica la sheet del mes anterior
+2. Cambia solo la columna `Valor`
+3. Mantén intacta la columna `Clave`
+4. Pega la URL publicada del CSV en el panel de administración de la app
+
 ## Deploy en GitHub Pages
 
 El repositorio ya quedo preparado para publicar automaticamente en GitHub Pages cada vez que hagas push a `main`.
